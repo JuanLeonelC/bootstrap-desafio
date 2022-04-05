@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Ramaraja&display=swap");
+
+:root {
+    --fnt-logo: 'Inspiration', cursive; /* 400 */
+    --fnt-texto: "Fredoka", sans-serif; /* 300 */
+    --fnt-texto-remarcado: "Ramaraja", serif; /* 400 */
+    --fnt-texto-encabezado: "Inconsolata", monospace; /* 400 */
+  
+    --clr-texto: #ff9100;
+    --clr-texto-focus: #ff6d00;
+    --clr-texto-negrita: #ff5400;
+    --clr-texto-blanco: #F7F5FB;
+    --clr-fondo-encabezado: #023e8a;
+    --clr-fondo-pie: #03045e;
+    --clr-fondo-main: #F9AB55;
+}
+
+
+.logo{
+    font-family: var(--fnt-logo) !important;
+    color: var(--clr-texto) !important;
+    font-size: min(1.25em,10vw);
+}
+
+.texto{
+    color: var(--clr-texto);
+    font-family: var(--fnt-texto);
+}
+
+.negrita{
+    color: var(--clr-texto-negrita);
+}
+
+.blanco{
+    color: var(--clr-texto-blanco) !important; 
+}
+
+body{
+    background-color: var(--clr-fondo-main);
+}
+
+/* encabezado */
+
+.header{
+    background-color: var(--clr-fondo-encabezado);
+}
+
+/* principal */
+
+.principal__img {
+    background-color: rgb(114, 114, 114);
+    background-blend-mode: multiply;
+    background-image: url(../imagenes/fondo_inicio.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: calc(25vh + 5rem);
+}
+/* nosotros */
+
+.nosotros__imagen{
+    background-image: url(../imagenes/producto1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(25vh + 5rem);
+}
+
+.nosotros__vacio{
+    display: none;
+}
+
+/* galeria */
+
+.galeria__fotos{
+    display: grid;
+    gap: 1em;
+}
+
+.imagen{
+    width: 100%;
+}
+
+.galeria__txt{
+    font-size: min(2.5em,7vw);
+}
+  
+/* contacto */
+.contacto__titulo{
+    background-image: url(https://www.claro.com.pe/portal/pe-2020/recursos_contenido/claro-home/93d534e5-3a10-4922-a143-490dccc78b75-banner_titulo_contactanos_desktop+28129.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 20vh;
+}
+
+.nosotros__txt{
+    background-color:var(--clr-texto-blanco);
+}
+
+
+
+/* footer */
+
+.redes{
+    width: 24px;
+    height: 24px;
+    padding-left: 0.125em;
+}
+/* responsive */
+/* tablet */
+@media screen and (min-width: 426px){
+    .galeria__fotos{
+        padding: 1.5rem;
+        display: grid;
+        grid-auto-columns: 1fr; 
+        grid-template-columns: repeat(4,1fr); 
+        grid-template-rows: repeat(4,min(700px,25vh)); 
+        gap: 2em 2em; 
+        grid-template-areas: 
+          "foto1 foto1 foto2 foto2"
+          "foto3 foto3 foto2 foto2"
+          "foto4 foto4 foto5 foto6"
+          "foto4 foto4 foto7 foto8"; 
+}
+    .foto1 { grid-area: foto1; }
+    .foto2 { grid-area: foto2; }
+    .foto3 { grid-area: foto3; }
+    .foto4 { grid-area: foto4; }
+    .foto5 { grid-area: foto5; }
+    .foto6 { grid-area: foto6; }
+    .foto7 { grid-area: foto7; }
+    .foto8 { grid-area: foto8; }
+    
+    
+.imagen{
+    width: 100%;
+    height: 100%;
+}
+}
+
+/* pc */
+@media screen and (min-width: 769px){
+.rotacion{
+        transform: rotate(-90deg);
+    }
+.nosotros__vacio{
+    display: block;
+    background-color: var(--clr-texto-focus);
+}
+}
+
+/* pc grande */
+
+@media screen and (min-width: 1025px){
+
+}
